@@ -1,9 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const ROOT_DIRECTORY = path.join(__dirname, '../'); // the root of your project
 const PUBLIC_DIRECTORY = path.join(ROOT_DIRECTORY, 'public'); // the root of the frontend, i.e. html file
-
 const config = {
   entry: [path.resolve(ROOT_DIRECTORY, 'src/index.js')], // the main JavaScript file of the project
   output: {
@@ -32,7 +30,14 @@ const config = {
     // helpers we want webpack to use
     rules: [
       // specific instructions for each helper
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }, // transpile JavaScript files
+      {
+        test: /\.(js|jsx)$/,
+        resolve: {
+          extensions: [".js", ".jsx"]
+        },
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }, // transpile JavaScript files
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
@@ -44,5 +49,4 @@ const config = {
     ],
   },
 };
-
 module.exports = config;
