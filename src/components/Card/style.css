@@ -1,0 +1,24 @@
+.card {
+    height: 200px;
+    width: 200px;
+    background-color:#42426F;
+    color: white;
+    padding: 20px;
+    opacity: 0.6;
+    margin: 20px 30px;
+}
+
+.card:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card.small {
+    height: 100px;
+    width: 100px;
+}
+
+.large.large {
+    height: 300px;
+    width: 300px;
+}
