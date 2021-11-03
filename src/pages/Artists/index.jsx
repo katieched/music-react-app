@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import { Card } from '../../components/Card/index';
-import { LikeButton } from '../../components/LikeButton/index';
-import { LyricsButton } from '../../components/LyricsButton/index';
+import React from 'react';
+import { Card, LikeButton, Lyrics } from '../../components';
 import './style.css';
 
 const artists = [
@@ -11,19 +9,13 @@ const artists = [
 ]
 
 export const Artists = () => {
-    const [ showLyrics, setShowLyrics ] = useState(false);
-    const toggleLyrics = () => setShowLyrics(prevState => !prevState);
-
     const renderArtists = () => artists.map((p, i) => {
         return (
-            <div className="artists">
+            <div key ={i} className="artists">
                 <div>
-                    <Card key ={i} name={p.name} musicGenre={p.musicGenre} intro={p.intro} />
+                    <Card name={p.name} musicGenre={p.musicGenre} intro={p.intro} />
                     <LikeButton />
-                
-                    <article aria-label='lyrics'>
-                        { showLyrics ? <LyricsButton key ={i} close={toggleLyrics} name={p.name} songTitle={p.songTitle} /> : <button onClick={toggleLyrics}>Get Lyrics!</button>}
-                    </article>
+                    <Lyrics p={p}/>
                 </div>
             </div>
         )
