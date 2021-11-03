@@ -1,5 +1,5 @@
 import React from 'react';
-import { Artists } from './components/Artists';
+import { Artists } from './components/Artists.jsx';
 import './style.css';
 
 
