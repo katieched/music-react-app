@@ -9,7 +9,7 @@ const artists = [
     { name: 'The Beatles', musicGenre: 'Pop', intro: 'The Beatles were an English rock band formed in Liverpool in 1960. The group, whose line-up comprised John Lennon, Paul McCartney, George Harrison and Ringo Starr, are regarded as the most influential band of all time.'}
 ]
 
-export const Artists = () => {
+const Artists = () => {
     const renderArtists = () => artists.map((p, i) => {
         return (
             <div className="artists">
@@ -29,3 +29,5 @@ export const Artists = () => {
         </section>
     )
 }
+
+export default Artists;
