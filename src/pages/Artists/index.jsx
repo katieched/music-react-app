@@ -20,6 +20,7 @@ export const Artists = () => {
                 <div>
                     <Card key ={i} name={p.name} musicGenre={p.musicGenre} intro={p.intro} />
                     <LikeButton />
+                
                     <article aria-label='lyrics'>
                         { showLyrics ? <LyricsButton key ={i} close={toggleLyrics} name={p.name} songTitle={p.songTitle} /> : <button onClick={toggleLyrics}>Get Lyrics!</button>}
                     </article>
@@ -30,9 +31,7 @@ export const Artists = () => {
 
     return (
         <section id="artists">
-            <ol>
-                { renderArtists() }
-            </ol>
+            { renderArtists() }
         </section>
     )
 }

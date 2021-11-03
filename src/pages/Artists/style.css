@@ -1,0 +1,24 @@
+div {
+    width: fit-content;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+/* .buttons {
+    width: auto ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* article {
+    display: flex;
+    justify-content: center;
+} */
+
