@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Card } from './Card/index';
-import { LikeButton } from './LikeButton/index';
-import { LyricsButton } from './LyricsButton/index';
+import { Card } from '../../components/Card/index';
+import { LikeButton } from '../../components/LikeButton/index';
+import { LyricsButton } from '../../components/LyricsButton/index';
 import './style.css';
 
 const artists = [

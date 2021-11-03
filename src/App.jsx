@@ -1,16 +1,21 @@
 import React from 'react';
-import { Artists } from './components/Artists.jsx';
+import { Switch, Route } from 'react-router-dom';
+import * as Pages from './pages';
 import './style.css';
 
 
 const App = () => {
     return (
         <>
-            <h1>Favourite Artists</h1>
+            <Switch>
+                <Route exact path='/'>
+                    <Pages.Home />
+                </Route>
 
-            <div className="artistsList">
-                <Artists />
-            </div>
+                <Route path='/artists'>
+                    <Pages.Artists />
+                </Route>
+            </Switch>
         </>
     )
 };
