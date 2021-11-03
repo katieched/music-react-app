@@ -29,5 +29,3 @@ export const Artists = () => {
         </section>
     )
 }
-
-export default Artists;
