@@ -13,7 +13,7 @@ export const LikeButton = () => {
             <span 
                 onClick={handleClick}
                 role="switch"
-                style={{ color: liked ? 'red' : 'grey' }}
+                style={{ color: liked ? '#ffcccc' : 'grey' }}
             >♥</span>
         </div>
     );

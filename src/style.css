@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&family=Zen+Kurenaido&display=swap');
+
+.artistsList {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+h1 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    display: flex;
+    justify-content: center;
+}
