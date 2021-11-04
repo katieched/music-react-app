@@ -11,7 +11,7 @@ const artists = [
 export const Artists = () => {
     const renderArtists = () => artists.map((p, i) => {
         return (
-            <div key ={i} className="artists">
+            <div key ={i} className="artist">
                 <div>
                     <Card name={p.name} musicGenre={p.musicGenre} intro={p.intro} />
                     <LikeButton />

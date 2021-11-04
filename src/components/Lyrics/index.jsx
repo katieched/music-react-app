@@ -6,7 +6,7 @@ export const Lyrics = ({ p }) => {
     const toggleLyrics = () => setShowLyrics(prevState => !prevState);
 
     return (
-        <article aria-label='lyrics'>
+        <article aria-label='lyrics' style={{whiteSpace: "pre-wrap"}}>
             { showLyrics ? <LyricsButton close={toggleLyrics} name={p.name} songTitle={p.songTitle} /> : <button onClick={toggleLyrics}>Get Lyrics!</button>}
         </article>
     )
